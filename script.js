@@ -5,5 +5,7 @@ const app = new Vue({
     data:{
         myPic: 'zio.jpeg',
         myName: 'Alberto',
+        advTitle: 'Ricevi notifiche di nuovi utenti',
+        advText: 'Attiva notifiche desktop'
     }
 })

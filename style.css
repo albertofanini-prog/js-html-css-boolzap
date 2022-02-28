@@ -56,7 +56,7 @@ img{
 }
 
 .user{
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     width: 100%;
     height: 8%;
     display: flex;
@@ -86,6 +86,10 @@ img{
     width: 60%;
 }
 
+.user_buttons button{
+    cursor: pointer;
+}
+
 #refresh, #message, #menu{
     width: 20px;
     margin: 0px 5px;
@@ -107,13 +111,14 @@ img{
 }
 
 .advise{
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     width: 100%;
-    height: 12%;
+    height: 10%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
+    background-color: #8EDAFC;
 }
 
 .searchbar{
@@ -133,17 +138,35 @@ li{
 }
 
 .advise_pic{
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     width: 50px;
     height: 50px;
     border-radius: 9999px;
     margin-left: 10px;
+    position: relative;
+    background-color: white
+}
+
+.advise_pic i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8EDAFC;
 }
 
 .advise_text{
-    border: 1px solid blue;
-    width: 150px;
+    /*border: 1px solid blue;*/
     height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advise_text p{
+    color: grey;
+    text-decoration: underline;
+    font-size: 12px;
 }
 
 .searchbar_items{
