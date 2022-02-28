@@ -251,15 +251,16 @@ li > *{
 }
 
 .chat_infobar{
-    border: 3px dashed blue;
+    /*border: 3px dashed blue;*/
     height: 8%;
     display: flex;
     align-items: center;
 }
 
 .contact_infobar{
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     width: 50px;
+    margin-left: 5px;
 }
 
 .contact_text_infobar h5{
@@ -271,14 +272,15 @@ li > *{
     color: grey;
 }
 
-
 .contact_text_infobar{
     flex-grow: 1;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
+    padding: 5px;
 }
 
 .chat_infobar{
     display: flex;
+    align-items: center;
 }
 
 .chat_main-section{
@@ -304,4 +306,17 @@ li > *{
 
 .active{
     background-color: #E9EBEB;
+}
+
+.buttons_infobar{
+    width: 100px;
+}
+
+.buttons_infobar button{
+    width: 30%;
+    height: 50px;
+    border: none;
+    background-color: white;
+    color: grey;
+    cursor: pointer;
 }

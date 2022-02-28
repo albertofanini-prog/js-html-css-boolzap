@@ -14,6 +14,7 @@ const app = new Vue({
         date:'28/02/2022 12:07',
         advTitle: 'Ricevi notifiche di nuovi utenti',
         advText: 'Attiva notifiche desktop',
+        lastLogin:'Ultimo accesso 28/02/2022 12:07',
 
     }
 })
