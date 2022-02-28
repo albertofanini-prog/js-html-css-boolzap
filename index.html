@@ -16,27 +16,27 @@
     <main>
         <div class="header_main"></div>
         <div class="body_main"></div>
-        <div class="boolzapp_wrapper">
+        <div class="boolzapp_wrapper" id="app">
             <div class="contacts">
                 <div class="user">
                     <div class="user_info">
                         <div class="user_image">
-
+                            <img :src="myPic" alt="">
                         </div>
                         <div class="user_nickname">
-
+                            <span>{{myName}}</span>
                         </div>
                     </div>
                     <div class="user_buttons">
                         <div class="buttons">
-                            <button>
-                                a
+                            <button id="refresh">
+                                <i class="fa-solid fa-arrow-rotate-right"></i>
                             </button>
-                            <button>
-                                b
+                            <button id="message">
+                                <i class="fa-solid fa-message"></i>
                             </button>
-                            <button>
-                                c
+                            <button id="menu">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
                             </button>
                         </div>
                     </div>
