@@ -21,7 +21,7 @@
                 <div class="user">
                     <div class="user_info">
                         <div class="user_image">
-                            <img :src="myPic" alt="">
+                            <img :src="myPic">
                         </div>
                         <div class="user_nickname">
                             <span>{{myName}}</span>
@@ -52,32 +52,39 @@
                 </div>
                 <div class="searchbar">
                     <div class="searchbar_items">
-
+                        <button class="searchbar_button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input
+                            id="input"
+                            type="text"
+                            placeholder="Cerca o inizia una nuova chat."
+                        >
                     </div>
                 </div>
                 <ul class="contacts_list">
-                    <li>
+                    <li class="active">
                         <div class="contact_pic">
-                            <img src="" alt="">
+                            <img :src="grandpaPic">
                         </div>
                         <div class="contact_text">
-                            <h5>Michele</h5>
-                            <p>Tutto fatto.</p>
+                            <h5>{{grandpaName}}</h5>
+                            <p>{{grandpaMessage}}</p>
                         </div>
                         <div class="date_text">
-                            28/02/2022
+                            {{date}}
                         </div>
                     </li>
                     <li>
                         <div class="contact_pic">
-                            <img src="" alt="">
+                            <img :src="anonymousPic">
                         </div>
                         <div class="contact_text">
-                            <h5>Fabio</h5>
-                            <p>Mi piacerebbe, ma devo andare a fare la spesa.</p>
+                            <h5>{{anonymousName}}</h5>
+                            <p>{{anonymousMessage}}</p>
                         </div>
                         <div class="date_text">
-                            28/02/2022
+                            {{date}}
                         </div>
                     </li>
                 </ul>
