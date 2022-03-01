@@ -140,6 +140,7 @@ li{
     /*border: 1px solid orange;*/
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .advise_pic{
@@ -189,6 +190,7 @@ li{
     max-height: 20px;
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 
 .searchbar_button i{
@@ -425,4 +427,8 @@ li > *{
     border-right-color: green;
     border-bottom-color: transparent;
     border-left-color: transparent;
+}
+
+.emoji_box, .microphone_box{
+    cursor: pointer;
 }
