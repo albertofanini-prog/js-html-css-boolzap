@@ -63,13 +63,19 @@
                     </div>
                 </div>
                 <ul class="contacts_list">
-                    <li v-for="element in contacts" class="active">
+                    <li 
+                        v-for="(element, activeItem) in contacts" 
+                        @click='index = activeItem' 
+                        :class="index == activeItem ? 'active' : '' "
+                    >
                         <div class="contact_pic">
                             <img :src="element.avatar">
                         </div>
                         <div class="contact_text">
                             <h5>{{element.name}}</h5>
-                            <p>{{element.message}}</p>
+                            <p>
+                                Ultimo accesso oggi alle 15:33
+                            </p>
                         </div>
                         <div class="date_text">
                             
@@ -78,12 +84,12 @@
                 </ul>
             </div>
             <div class="chat">
-                <div class="chat_infobar">
+                <div v-for="element in contacts" :key="element.text" class="chat_infobar">
                     <div class="contact_infobar">
                         <img>
                     </div>
                     <div class="contact_text_infobar">
-                        <h5>{{grandpaName}}</h5>
+                        <h5>{{element.name}}</h5>
                         <p>{{lastLogin}}</p>
                     </div>
                     <div class="buttons_infobar">
