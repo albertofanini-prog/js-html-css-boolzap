@@ -47,7 +47,7 @@
                     </div>
                     <div class="advise_text">
                         <h5>{{advTitle}}</h5>
-                        <p>{{advText}}</p>
+                        <a href="#"><p>{{advText}}</p></a>
                     </div>
                 </div>
                 <div class="searchbar">
@@ -63,28 +63,16 @@
                     </div>
                 </div>
                 <ul class="contacts_list">
-                    <li class="active">
+                    <li v-for="element in contacts" class="active">
                         <div class="contact_pic">
-                            <img :src="grandpaPic">
+                            <img :src="element.avatar">
                         </div>
                         <div class="contact_text">
-                            <h5>{{grandpaName}}</h5>
-                            <p>{{grandpaMessage}}</p>
+                            <h5>{{element.name}}</h5>
+                            <p>{{element.message}}</p>
                         </div>
                         <div class="date_text">
-                            {{date}}
-                        </div>
-                    </li>
-                    <li>
-                        <div class="contact_pic">
-                            <img :src="anonymousPic">
-                        </div>
-                        <div class="contact_text">
-                            <h5>{{anonymousName}}</h5>
-                            <p>{{anonymousMessage}}</p>
-                        </div>
-                        <div class="date_text">
-                            {{date}}
+                            
                         </div>
                     </li>
                 </ul>
@@ -92,7 +80,7 @@
             <div class="chat">
                 <div class="chat_infobar">
                     <div class="contact_infobar">
-                        <img :src="grandpaPic" alt="">
+                        <img>
                     </div>
                     <div class="contact_text_infobar">
                         <h5>{{grandpaName}}</h5>
@@ -111,7 +99,15 @@
                     </div> 
                 </div>
                 <div class="chat_main-section">
-
+                    <div class="message sent">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="message sent">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi fugiat laborum nostrum.
+                    </div>
+                    <div class="message received">
+                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                    </div>
                 </div>
                 <div class="chat_messagebar">
                    <div class="emoji_box">
@@ -121,7 +117,7 @@
                     <input
                         id="input"
                         type="text"
-                        placeholder="Scrivi un messaggio."
+                        placeholder=" Scrivi un messaggio."
                     >
                    </div>
                    <div class="microphone_box">
