@@ -84,15 +84,15 @@
                 </ul>
             </div>
             <div class="chat">
-                <div v-for="(element, activeItem) in contacts" 
+                <div
                     :class="index == activeItem ? 'active' : '' " 
                     class="chat_infobar"
                 >
-                    <div class="contact_infobar" v-for="element in contacts" v-show="element.avatar">
-                        <img :src="element.avatar">
+                    <div class="contact_infobar">
+                        <img :src="contacts[index].avatar">
                     </div>
                     <div class="contact_text_infobar">
-                        <h5>{{element.name}}</h5>
+                        <h5>{{contacts[index].name}}</h5>
                         <p>{{lastLogin}}</p>
                     </div>
                     <div class="buttons_infobar">
