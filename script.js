@@ -96,8 +96,8 @@ const app = new Vue({
             ],
             },
             {
-                name: 'Luisa',
-                avatar: 'img/babe.jpeg',
+                name: 'Boss',
+                avatar: 'img/boss.jpeg',
                 visible: true,
                     messages: [
                 {
