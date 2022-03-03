@@ -314,9 +314,20 @@ li > *{
     border-radius: 15px;
     /* box-shadow: 0 2px 3px #aaa; */
     padding: 5px 20px;
-    font-size: 13px;
+    font-size: 16px;
     position: relative;
-    filter: drop-shadow(0px 1px 1px #aaa)
+    filter: drop-shadow(0px 1px 1px #aaa);
+    display: flex;
+    flex-direction: column;
+}
+
+#text_message{
+    align-self: flex-start;
+}
+
+#date_message{
+    align-self: flex-end;
+    font-size: 12px;
 }
 
 .message::before{
@@ -386,6 +397,8 @@ li > *{
 .message.sent + .message.received{
     border-top-left-radius: 0;
 }
+
+
 
 .chat_messagebar{
     height: 12%;
