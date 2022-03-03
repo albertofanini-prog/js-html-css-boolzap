@@ -112,10 +112,10 @@
                     <div
                         class="message"
                         v-for='(message, i) in contacts[index].messages'
-                        :class="message.status == 'sent' ? 'sent' : 'received'"
+                        :class="message.status"
                     >
                         <p id="text_message">{{message.text}}</p>
-                        <p id="date_message">{{message.date}}</p>
+                        <p id="date_message">{{getHours(message.date)}}</p>
                     </div>                    
                 </div>
                 <div class="chat_messagebar">

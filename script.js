@@ -38,12 +38,12 @@ const app = new Vue({
                 messages: [
                 {
                     date: '10/01/2020 15:30:55',
-                    text: 'Hai portato a spasso il cane?',
+                    text: 'Hai portato la macchina ad aggiustare?',
                     status: 'sent'
                 },
                 {
                     date: '10/01/2020 15:50:00',
-                    text: 'Ricordati di dargli da mangiare',
+                    text: 'Ricordati di controllare la pressione delle gomme.',
                     status: 'sent'
                 },
                 {
@@ -54,7 +54,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Fabio',
+                name: 'Jimmy',
                 avatar: 'img/business_man.jpeg',
                 visible: true,
                 messages: [
@@ -65,12 +65,12 @@ const app = new Vue({
                 },
                 {
                     date: '20/03/2020 16:30:55',
-                    text: 'Bene grazie! Stasera ci vediamo?',
+                    text: 'Bene grazie! Te?? Stasera ci vediamo?',
                     status: 'received'
                 },
                 {
                     date: '20/03/2020 16:35:00',
-                    text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                    text: 'Si! Aperitivo alle 6 al solito posto!',
                     status: 'sent'
                 }
             ],
@@ -87,7 +87,7 @@ const app = new Vue({
                 },
                 {
                     date: '28/03/2020 10:20:10',
-                    text: 'Sicuro di non aver sbagliato chat?',
+                    text: 'Sicura di non aver sbagliato chat?',
                     status: 'sent'
                 },
                 {
@@ -104,12 +104,12 @@ const app = new Vue({
                     messages: [
                 {
                     date: '10/01/2020 15:30:55',
-                    text: 'Lo sai che ha aperto una nuova pizzeria?',
+                    text: 'Buonasera, dovrei parlarle di alcune cose...',
                     status: 'sent'
                 },
                 {
                     date: '10/01/2020 15:50:00',
-                    text: 'Si, ma preferirei andare al cinema',
+                    text: 'Ciao Alberto! Vieni pure nel mio ufficio domattina.',
                     status: 'received'
                 }
             ],
@@ -127,6 +127,7 @@ const app = new Vue({
 
                     text: this.writeNewOne,
                     status: 'sent',
+                    date: 'Sent now',
 
                 }
 
@@ -134,6 +135,10 @@ const app = new Vue({
 
                 this.writeNewOne = "";
             }
+        },
+        getHours: function ( date ){
+            const hour = date.split(' ')[1];
+            return hour.substring(0, 5);
         }
     }
 })
