@@ -303,9 +303,9 @@ li > *{
 
 .chat_main-section{
     background-color: #E5DDD5;
-    height: 80%;
-    padding: 40px;
+    padding: 20px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     gap: 3px;
 }
@@ -328,9 +328,18 @@ li > *{
     filter: drop-shadow(0 2px 3px #aaa)
 }
 
-.message.sent{
+.sent{
     background-color: #dcf9ba;
     align-self: flex-end;
+}
+
+.received{
+    background-color: #ffffff;
+    align-self: flex-start;
+}
+
+.sent, .received{
+    border-radius: 20px;
 }
 
 .message.sent::before{
@@ -347,7 +356,7 @@ li > *{
     display: block;
 }
 
-.message.received{
+.received{
     background-color: #ffffff;
     align-self: flex-start;
 }
