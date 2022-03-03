@@ -19,8 +19,11 @@ console.log('Welcome to Boolzapp!');
 //     }
 // })
 
+//Creare istanza su cui lavorare
 const app = new Vue({
+    //Comunicare dove lavorare
     el: '#app',
+    //Creare i dati da utilizzare
     data:{
         myPic: 'img/me.jpeg',
         myName: 'Alberto',
@@ -116,44 +119,44 @@ const app = new Vue({
             },
         ]    
     },
+    //Creare funzioni da utilizzare
     methods:{
+        //Scrivere messaggio e inviare con tasto invio
         writeNewMessage: function(){
-
+            //Se la barra del messaggio non è vuota
             if(this.writeNewOne !== ""){
-
                 const user = this.contacts[this.index];
-
+                //Creare un nuovo oggetto
                 const newOne = {
-
                     text: this.writeNewOne,
                     status: 'sent',
                     date: 'Sent now',
-
                 }
-
+                //E inserirlo nei messaggi
                 user.messages.push(newOne);
-
+                //Pulire la barra di scrittura
                 this.writeNewOne = "";
-
-                setTimeout(this.reply, 3000); 
+                //Avviare un timer per avere una risposta automatica
+                setTimeout(this.reply, 1000); 
             }
         },
+        //Ricevere una risposta automatica dal computer
         reply: function(){
             //console.log('Rispondo dopo 3 secondi');
             const user = this.contacts[this.index];
+            //Creare l'oggetto da inviare come risposta
             const newOne = {
-
-                text: 'ok',
+                text: 'Ricevuto!',
                 status: 'received',
                 date: 'Sent now',
-
             }
+            //Inserirlo nella lista dei messaggi
             user.messages.push(newOne);
-
         },
+        //Ricevere la data con dei valori precisi(hh,mm)
         getHours: function ( date ){
             const hour = date.split(' ')[1];
             return hour.substring(0, 5);
-        }
+        },
     }
 })
