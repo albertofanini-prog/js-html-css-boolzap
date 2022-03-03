@@ -28,6 +28,7 @@ const app = new Vue({
         advText: 'Attiva notifiche desktop',
         lastLogin:'Ultimo accesso 28/02/2022 12:07',
         index: 0,
+        writeNewOne: '',
         contacts: [
             {
                 name: 'Nonno',
@@ -114,4 +115,22 @@ const app = new Vue({
             },
         ]    
     },
+    methods:{
+        writeNewMessage: function(){
+
+            if(this.writeNewOne !== ""){
+
+                const user = this.contacts[this.index];
+
+                const newOne = {
+
+                    text: this.writeNewOne,
+                    status: 'sent',
+
+                }
+
+                user.messages.push(newOne);
+            }
+        }
+    }
 })

@@ -126,6 +126,8 @@
                         id="input"
                         type="text"
                         placeholder=" Scrivi un messaggio."
+                        @keyup.enter="writeNewMessage"
+                        v-model="writeNewOne"
                     >
                    </div>
                    <div class="microphone_box">
