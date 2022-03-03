@@ -351,6 +351,7 @@ li > *{
 
 .sent, .received{
     border-radius: 20px;
+    min-width: 10%;
 }
 
 .message.sent::before{

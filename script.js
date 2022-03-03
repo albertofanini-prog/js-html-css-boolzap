@@ -134,7 +134,22 @@ const app = new Vue({
                 user.messages.push(newOne);
 
                 this.writeNewOne = "";
+
+                setTimeout(this.reply, 3000); 
             }
+        },
+        reply: function(){
+            //console.log('Rispondo dopo 3 secondi');
+            const user = this.contacts[this.index];
+            const newOne = {
+
+                text: 'ok',
+                status: 'received',
+                date: 'Sent now',
+
+            }
+            user.messages.push(newOne);
+
         },
         getHours: function ( date ){
             const hour = date.split(' ')[1];
