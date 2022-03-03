@@ -33,6 +33,7 @@ const app = new Vue({
         index: 0,
         writeNewOne: '',
         answer: 'ok',
+        searchUser: '',
         contacts: [
             {
                 name: 'Nonno',
