@@ -108,10 +108,10 @@
                 </div>
                 <div
                     class="chat_main-section"
-                    v-for='(message, i) in contacts[index].messages'
                 >
                     <div
                         class="message"
+                        v-for='(message, i) in contacts[index].messages'
                         :class="message.status == 'sent' ? 'sent' : 'received'"
                     >
                         {{message.text}}

@@ -29,6 +29,7 @@ const app = new Vue({
         lastLogin:'Ultimo accesso 28/02/2022 12:07',
         index: 0,
         writeNewOne: '',
+        answer: 'ok',
         contacts: [
             {
                 name: 'Nonno',
@@ -130,6 +131,8 @@ const app = new Vue({
                 }
 
                 user.messages.push(newOne);
+
+                this.writeNewOne = "";
             }
         }
     }
