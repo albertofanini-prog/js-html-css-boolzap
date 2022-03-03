@@ -163,3 +163,55 @@
         width: 25%;
     }
 }
+
+/*iPhone SE*/
+@media screen and (max-width: 375px){
+    .contacts{
+        display: none;
+    }
+    .chat{
+        width: 100%;
+    }
+    .buttons_infobar{
+        width: 30%;
+    }
+    .contact_infobar{
+        max-width: 35px;
+        max-height: 35px;
+    }
+    .contact_text_infobar h5{
+        font-size: 10px;
+    }
+    .contact_text_infobar p{
+        font-size: 8px;
+    }
+    .message_input{
+        font-size: 12px;
+    }
+}
+
+/*Glaxy Fold*/
+@media screen and (max-width: 280px){
+    .contacts{
+        display: none;
+    }
+    .chat{
+        width: 100%;
+    }
+    .buttons_infobar{
+        width: 30%;
+    }
+    .contact_infobar{
+        max-width: 30px;
+        max-height: 30px;
+    }
+    .contact_text_infobar h5{
+        font-size: 10px;
+    }
+    .contact_text_infobar p{
+        font-size: 8px;
+    }
+    .message_input{
+        font-size: 12px;
+    }
+}

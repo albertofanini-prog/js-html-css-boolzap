@@ -208,6 +208,15 @@ li{
     outline: none;
 }
 
+.contacts_list{
+    overflow-y: scroll;
+}
+
+.contacts_list::-webkit-scrollbar{
+    width: 15px;
+    scrollbar-color: #999 #333;
+}
+
 li > *{
     /*border: 1px solid blue;*/
     height: 70px;
