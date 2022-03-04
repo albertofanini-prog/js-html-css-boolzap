@@ -61,12 +61,14 @@
                             type="search"
                             placeholder="Cerca o inizia una nuova chat."
                             v-model="searchUser"
+                            @keyup="contactsFilter"
                         >
                     </div>
                 </div>
                 <ul class="contacts_list">
                     <li 
                         v-for="(element, activeItem) in contacts" 
+                        v-if="element.visible"
                         @click='index = activeItem'
                         :class="index == activeItem ? 'active' : '' "
                     >

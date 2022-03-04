@@ -277,7 +277,7 @@ const app = new Vue({
                 },
                 ],
             },
-        ]    
+        ]
     },
     //Creare funzioni da utilizzare
     methods:{
@@ -297,7 +297,7 @@ const app = new Vue({
                 //Pulire la barra di scrittura
                 this.writeNewOne = "";
                 //Avviare un timer per avere una risposta automatica
-                setTimeout(this.reply, 1000); 
+                setTimeout(this.reply, 1000);
             }
         },
         //Ricevere una risposta automatica dal computer
@@ -318,21 +318,18 @@ const app = new Vue({
             const hour = date.split(' ')[1];
             return hour.substring(0, 5);
         },
-    },
-    computed: {
-        // findHim(){
-        //     let userFinder = this.contacts;
+        contactsFilter: function(){
+            // console.log(this.searchUser);
+            this.contacts.forEach(el =>{
 
-        //     if(this.searchUser != '' && this.searchUser){
-        //         userFinder = userFinder.filter((element) =>{
-        //             return element.name.toLowerCase().includes(this.searchUser.toLowerCase())
-        //         })
-        //     } return userFinder;
-        // }
-        chatFinder: function(){
-            return this.contacts.filter(user =>{
-                return user.name.toLowerCase().includes(this.searchUser.toLowerCase());
+                if(el.name.toLowerCase().includes(this.searchUser.toLowerCase() ) ){
+                    console.log(el.name);
+                    el.visible = true;
+                } else{
+                    el.visible = false;
+                }
+
             })
-        },
-    }
+        }
+    },
 })
