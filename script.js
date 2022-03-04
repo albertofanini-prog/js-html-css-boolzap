@@ -290,7 +290,7 @@ const app = new Vue({
                 const newOne = {
                     text: this.writeNewOne,
                     status: 'sent',
-                    date: 'Sent now',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 }
                 //E inserirlo nei messaggi
                 user.messages.push(newOne);
@@ -308,7 +308,7 @@ const app = new Vue({
             const newOne = {
                 text: 'Ricevuto!',
                 status: 'received',
-                date: 'Sent now',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
             }
             //Inserirlo nella lista dei messaggi
             user.messages.push(newOne);
@@ -319,17 +319,31 @@ const app = new Vue({
             return hour.substring(0, 5);
         },
         contactsFilter: function(){
-            // console.log(this.searchUser);
+            console.log(this.searchUser);
             this.contacts.forEach(el =>{
-
                 if(el.name.toLowerCase().includes(this.searchUser.toLowerCase() ) ){
                     console.log(el.name);
                     el.visible = true;
                 } else{
                     el.visible = false;
                 }
-
-            })
+            });
+        },
+        getLastMessage: function (contact){
+            if(this.message.length === 0){
+                return '';
+            }
+            const lastIndex = message.length - 1;
+            const lastMessage = messages [lastIndex];
+            return lastMessage.message
         }
     },
+    // computed:{
+    //     filteredContacts: function(){
+    //         return this.contacts.filter( el => {
+    //             return el.name.toLowerCase().includes(this.search.toLowerCase())
+    //         })
+    //     }
+
+    // }
 })

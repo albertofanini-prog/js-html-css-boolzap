@@ -312,6 +312,7 @@ li > *{
     flex-grow: 1;
     flex-direction: column;
     gap: 7px;
+    overflow-y: scroll;
 }
 
 .message{
