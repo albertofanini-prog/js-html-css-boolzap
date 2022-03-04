@@ -102,7 +102,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Babe 2',
+                name: 'Love',
                 avatar: 'img/marta.jpeg',
                 visible: true,
                 messages: [
